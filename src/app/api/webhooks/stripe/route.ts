@@ -4,8 +4,6 @@ import { stripe } from "@/lib/stripe/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { SubscriptionTier } from "@/types/database";
 
-export const runtime = "nodejs";
-
 export async function POST(request: Request) {
   const body = await request.text();
   const headersList = await headers();
